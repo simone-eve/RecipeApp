@@ -11,7 +11,7 @@ namespace RecipeApp
         public void Menu()
         {
             Console.WriteLine("\nWould you like to: \n1) Enter the Recipe Details \n2) View the Recipe \n3) Scale your Recipe " +
-                "\n4) Reset Scale \n5) Delete Recipe \n6) Exit");
+                "\n4) Reset Scale \n5) Delete Recipe \n6) Exit ");
             int menuChoice = Convert.ToInt32(Console.ReadLine());
 
             switch (menuChoice)
