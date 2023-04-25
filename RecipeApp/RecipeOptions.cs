@@ -45,5 +45,60 @@ namespace RecipeApp
 
 
         }
+
+        public void RecipeDetails()
+        {
+            Console.WriteLine("\nPlease enter how many ingridients there are in your recipe:");
+            int numIngredients = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < numIngredients; i++)
+            {
+
+                int ingredientOrderNum = i + 1;
+                Console.WriteLine("Please enter ingridient number " + ingredientOrderNum + "s name:");
+                string iName = Console.ReadLine();
+
+                Console.WriteLine("Please enter the quantity of " + iName + " (i.e 5 for 5 spoons):");
+                double iQuantity = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Please enter the unit of measurement used for " + iName + " (i.e tablespoons):");
+                string iMeasurement = Console.ReadLine();
+
+                RecipeLists.ingredientList.Add(new Ingredients(iName, iQuantity, iMeasurement));
+
+            }
+
+
+            Console.WriteLine("\nHow many steps are there in your recipe?");
+            int steps = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < steps; i++)
+            {
+                int stepNum = i + 1;
+                Console.WriteLine("Please describe step number " + stepNum + ".");
+                string stepDescription = Console.ReadLine();
+
+                RecipeLists.stepList.Add(new Steps(stepDescription));
+            }
+
+            Console.WriteLine("Recipe added!");
+
+            Console.WriteLine("\n------------------------\n1)Menu \n2)Exit\n------------------------");
+            int EndChoice = Convert.ToInt32(Console.ReadLine());
+            if (EndChoice.Equals(1))
+            {
+                Menu();
+            }
+            else
+            {
+                System.Environment.Exit(0);
+            }
+
+        }
+
+
+
+
+
     }
 }
