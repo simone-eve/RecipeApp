@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 namespace RecipeApp
 {
     internal class Ingredients
-    {
+    {  //creating properties for the name, quantity and unitOfMeasurement variable.
         public string Name { get; set; }
 
         public double Quantity { get; set; }
 
         public string unitOfMeasurement { get; set; }
 
-        public Ingredients(string name, double quantity, string unitOfMeasurement)
+        public Ingredients(string name, double quantity, string unitOfMeasurement) //creating a constructor for the Ingredients class.
         {
             Name = name;
             Quantity = quantity;
