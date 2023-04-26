@@ -97,6 +97,54 @@ namespace RecipeApp
         }
 
 
+        void ViewRecipe() //creating a ViewRecipe method so that all the data the user inputs can be displayed.
+        {
+
+            Console.WriteLine("\nIngredients: \n------------------------");
+            foreach (var viewIngredient in RecipeLists.ingredientList) //using a foreach loop so that each ingredient in the list can be displayed.   //code attribution: C# Foreach: what it is, How it works, Syntax and Example Code, https://www.simplilearn.com/tutorials/asp-dot-net-tutorial/csharp-foreach#:~:text=The%20foreach%20loop%20in%20C%23%20uses%20the%20%27in%27%20keyword%20to,variable%20changes%20in%20every%20iteration.
+            {
+                Console.WriteLine("Name: " + viewIngredient.Name + "\nQuantity: " + viewIngredient.Quantity
+                    + " " + viewIngredient.unitOfMeasurement);
+            }
+            Console.WriteLine("------------------------");
+
+
+
+            Console.WriteLine("\nSteps: \n------------------------");
+            foreach (var viewStep in RecipeLists.stepList) //using a foreach loop so that each step in the list can be displayed.
+            {
+                Console.WriteLine("- " + viewStep.Description);
+            }
+            Console.WriteLine("------------------------");
+
+            Console.WriteLine("\n------------------------\n1)Menu \n2)Exit\n------------------------");  //using an if statement to send the user to whichever choice they make.
+            int EndChoice = Convert.ToInt32(Console.ReadLine());
+            if (EndChoice.Equals(1))
+            {
+                Menu();
+            }
+            else
+            {
+                System.Environment.Exit(0);
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
