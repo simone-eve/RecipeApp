@@ -15,8 +15,9 @@ namespace RecipeApp
         public void RecipeName() //creating a RecipeName method so that the user is able to record the name of the recipe.
         {
             Console.WriteLine("\nPLease enter your recipes name:");
-            recipeName = Console.ReadLine(); 
-        
+            recipeName = Console.ReadLine();
+     
+            Menu(); //calling the menu so that the user can start inputting/altering data.
         }
 
         public void Menu() //creating the Menu method which will allow the user to input details about their recipe along with selecting how they would like to alter it.
@@ -412,7 +413,7 @@ namespace RecipeApp
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("\n------------------------");  //creating a break to make the application look more organised.
                     Console.ResetColor();
-                    Console.WriteLine("1)Menu \n2)Exit");  //enabling the user to exit the program or go back to the main method so that they can alter their data how they choose.
+                    Console.WriteLine("1)Input new Recipe \n2)Exit");  //enabling the user to exit the program or go back to the main method so that they can alter their data how they choose.
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("------------------------");
                     Console.ResetColor();
@@ -420,7 +421,7 @@ namespace RecipeApp
                     EndChoice = Convert.ToInt32(Console.ReadLine());
                     if (EndChoice.Equals(1)) //using an if statement to send the user to whichever choice they make.
                     {
-                        Menu();
+                        RecipeName();
                     }
                     else
                     {
@@ -434,26 +435,6 @@ namespace RecipeApp
             } while (EndChoice == 0);
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         }
 }
