@@ -365,11 +365,10 @@ namespace RecipeApp
                 }
             } while (EndChoice == 0);
         }
-    
 
-    void DeleteRecipe() //creating a DeleteRecipe method to clear the data inputed into the lists.
-    {
-      int deleteChoice = 0;
+        void DeleteRecipe() //creating a DeleteRecipe method to clear the data inputed into the lists.
+        {
+            int deleteChoice = 0;
             do
             {
                 try
@@ -388,36 +387,37 @@ namespace RecipeApp
                 {
                     Console.WriteLine("\nPlease enter a valid quantity.\n");
                 }
-            } while (deleteChoice == 0); 
+            } while (deleteChoice == 0);
 
-        do //using a try-catch statement to ensure that the application does not fail if the user inputs the wrong data.
-        {
-            try
+            do //using a try-catch statement to ensure that the application does not fail if the user inputs the wrong data.
             {
-                Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine("\n------------------------");  //creating a break to make the applicaation look more organised.
-                Console.ResetColor();
-                Console.WriteLine("1)Menu \n2)Exit");  //enabling the user to exit the program or go back to the main method so that they can alter their data how they choose.
-                Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine("------------------------");
-                Console.ResetColor();
-
-                EndChoice = Convert.ToInt32(Console.ReadLine());
-                if (EndChoice.Equals(1)) //using an if statement to send the user to whichever choice they make.
+                try
                 {
-                    Menu();
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("\n------------------------");  //creating a break to make the applicaation look more organised.
+                    Console.ResetColor();
+                    Console.WriteLine("1)Menu \n2)Exit");  //enabling the user to exit the program or go back to the main method so that they can alter their data how they choose.
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("------------------------");
+                    Console.ResetColor();
+
+                    EndChoice = Convert.ToInt32(Console.ReadLine());
+                    if (EndChoice.Equals(1)) //using an if statement to send the user to whichever choice they make.
+                    {
+                        Menu();
+                    }
+                    else
+                    {
+                        System.Environment.Exit(0);
+                    }
                 }
-                else
+                catch (FormatException)
                 {
-                    System.Environment.Exit(0);
+                    Console.WriteLine("\nPlease enter a valid quantity.\n");
                 }
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("\nPlease enter a valid quantity.\n");
-            }
-        } while (EndChoice == 0);
-    }
+            } while (EndChoice == 0);
+
+        }
 
 
 
@@ -437,5 +437,7 @@ namespace RecipeApp
 
 
 
-}
+
+
+        }
 }
