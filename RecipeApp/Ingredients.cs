@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace RecipeApp
 {
     internal class Ingredients
-    {  //creating properties for the name, quantity and unitOfMeasurement variable.
+    {  
+        //creating properties for the name, quantity and unitOfMeasurement variables.
         public string Name { get; set; }
 
         public double Quantity { get; set; }
