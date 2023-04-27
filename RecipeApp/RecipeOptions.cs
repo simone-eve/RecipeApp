@@ -10,6 +10,13 @@ namespace RecipeApp
     {
         int scaleNumber = 0;
         int EndChoice = 0;
+        string recipeName = "";
+        public void RecipeName()
+        {
+            Console.WriteLine("PLease enter your recipes name:");
+            recipeName = Console.ReadLine(); 
+        
+        }
 
         public void Menu() //creating the Menu method which will allow the user to input details about their recipe along with select how they alter it.
         {
@@ -170,9 +177,13 @@ namespace RecipeApp
 
         void ViewRecipe() //creating a ViewRecipe method so that all the data the user inputs can be displayed.
         {
-            Console.ForegroundColor = ConsoleColor.Cyan;  //adding colour to text.
-            Console.WriteLine("Ingredients: ");
+            string boldText = string.Format("<b>{0}</b>", recipeName);
+            Console.WriteLine(boldText);
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("\n------------------------");  //creating a break to make the applicaation look more organised.
             Console.ResetColor();
+
+            Console.WriteLine("Ingredients: ");
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("\n------------------------");  //creating a break to make the applicaation look more organised.
             Console.ResetColor();
@@ -186,9 +197,7 @@ namespace RecipeApp
             Console.ResetColor();
 
 
-            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("\nSteps: ");
-            Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("------------------------");
             Console.ResetColor();
