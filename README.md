@@ -28,6 +28,7 @@ The motivation of creating this application was so that everyday users aren’t 
 
 >When you run the application you will be prompted to enter the recipes name, enter as such. Next you will be prompted with a menu where you can select various options to alter/add to your recipes. To add the details to your recipe select option 1 and enter the recipe details which will include the ingredients details (name, quantity and unit of measurement) and the steps details (step description). To view a list of all your recipes details, select option 2. To scale a recipe, select option 3. Thereafter you will be prompted on whether you would like to scale it to 0.5, 2 or 3.  To descale a recipe, select option 4 and the application will automatically descale the quantity to it's original value. To delete a recipe select option 5, the application will confirm whether you would like to delete the recipe and if you confirm it will be deleted. Finally, you will be able to return to the enter recipe name prompt and then the main menu and input the details for a new recipe.
 
+
 ###### Tests
 
 Unit Tests to come at a later date.
