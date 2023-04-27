@@ -177,8 +177,7 @@ namespace RecipeApp
 
         void ViewRecipe() //creating a ViewRecipe method so that all the data the user inputs can be displayed.
         {
-            string boldText = string.Format("<b>{0}</b>", recipeName);
-            Console.WriteLine(boldText);
+            Console.WriteLine(recipeName);
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("\n------------------------");  //creating a break to make the applicaation look more organised.
             Console.ResetColor();
@@ -389,6 +388,7 @@ namespace RecipeApp
                     {
                         RecipeLists.ingredientList.Clear(); //clearing the lists       //code attribution: C# List.Clear() – Remove All Element from List, https://www.tutorialkart.com/c-sharp-tutorial/c-sharp-list-clear/
                         RecipeLists.stepList.Clear();
+                        recipeName = recipeName.Remove(0);
                         Console.WriteLine("\nRecipe Deleted!");
                     }
                 }
